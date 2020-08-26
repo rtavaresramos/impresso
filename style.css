@@ -27,7 +27,7 @@
 
     --rubik: 'Rubik', sans-serif;
     --manrope: 'Manrope', sans-serif;
-    --spacing: 4px;
+    --spacing: 0.4em;
 }
 
 body,html,*{
@@ -39,9 +39,19 @@ body{
     font-family: var(--rubik);
     font-size: 10px;
 }
+svg{
+   width: 2em !important;
+}
+.normalize svg{
+   width: 1.75em !important;
+}
+
+.check svg{
+    width: 2.75em !important;
+}
 header,main,section{
     width: 100%;
-    max-width: 1240px;
+    max-width: 124em;
     padding: 30px 30px 0;
     margin: 0 auto;
 }
@@ -92,4 +102,10 @@ header,main,section{
 .sub-section-tittle{
     width: 100%;
     border-bottom: 1px solid var(--border);
+}
+
+@media screen and (max-width: 485px){
+    body{
+        font-size: 4px;
+    }
 }
